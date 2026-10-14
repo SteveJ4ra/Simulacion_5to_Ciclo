@@ -24,21 +24,31 @@ El código utiliza el patrón arquitectónico Modelo Vista Controlador (MVC). El
 
 ## Instalación
 
-Se necesita Python 3.13 y Git para clonar el repositorio. Los siguientes comandos corresponden a PowerShell en Windows.
+Se necesita Python 3.13 y Git para clonar el repositorio. Si ya lo tienes, abre la consola dentro de `Unidad 1/APE 1` y continúa con la creación del entorno.
+
+### Windows (PowerShell)
 
 ```powershell
 git clone https://github.com/SteveJ4ra/Simulacion_5to_Ciclo.git
 cd "Simulacion_5to_Ciclo\Unidad 1\APE 1"
-```
-
-Si ya tienes el repositorio, abre una consola dentro de `Unidad 1\APE 1`. Desde esa carpeta, crea el entorno e instala las dependencias:
-
-```powershell
 python -m venv Proyecto\.venv
 .\Proyecto\.venv\Scripts\python.exe -m pip install -r requirements.txt
 ```
 
-Los comandos utilizan directamente el Python del entorno virtual.
+### Linux y macOS (Bash o Zsh)
+
+Comprueba que `python3 --version` corresponde a Python 3.13. Si tienes varias versiones, utiliza `python3.13` para crear el entorno.
+
+```bash
+git clone https://github.com/SteveJ4ra/Simulacion_5to_Ciclo.git
+cd "Simulacion_5to_Ciclo/Unidad 1/APE 1"
+python3 -m venv Proyecto/.venv
+./Proyecto/.venv/bin/python -m pip install -r requirements.txt
+```
+
+En Linux, la instalación de Python debe incluir el soporte de `venv` de la versión utilizada. Si el comando de creación indica que falta ese componente, instálalo con el gestor de paquetes de tu distribución.
+
+Los comandos siguientes utilizan directamente el Python del entorno virtual; puedes ejecutarlos sin activar el entorno.
 
 ## Configuración
 
@@ -48,30 +58,58 @@ Los pesos deben ser no negativos y sumar 1. La humedad y la nubosidad deben esta
 
 ## Uso
 
-Ejecuta desde la carpeta del APE:
+Todos los comandos se ejecutan desde la carpeta del APE. El programa muestra en consola las tablas de ambos modelos, su comparación y las horas clasificadas como lluvia. También abre las ventanas con las gráficas y guarda los resultados en `Proyecto/resultados/`.
+
+### Windows (PowerShell)
+
+Ejecutar con las ventanas de las gráficas:
 
 ```powershell
 .\Proyecto\.venv\Scripts\python.exe .\Proyecto\Vista\main.py
 ```
 
-El programa muestra en consola las tablas de ambos modelos, su comparación y las horas clasificadas como lluvia. También abre las ventanas con las gráficas y guarda los resultados en `Proyecto/resultados/`.
-
-Para generar los resultados sin abrir la ventana:
+Generar los resultados sin abrir ventanas:
 
 ```powershell
 .\Proyecto\.venv\Scripts\python.exe .\Proyecto\Vista\main.py --sin-ventana
 ```
 
-Para elegir otra carpeta de salida:
+Elegir otra carpeta de salida:
 
 ```powershell
 .\Proyecto\.venv\Scripts\python.exe .\Proyecto\Vista\main.py --sin-ventana --salida ".\Proyecto\resultados\comparacion"
 ```
 
-Para consultar las opciones:
+Consultar las opciones:
 
 ```powershell
 .\Proyecto\.venv\Scripts\python.exe .\Proyecto\Vista\main.py --help
+```
+
+### Linux y macOS (Bash o Zsh)
+
+Ejecutar con las ventanas de las gráficas:
+
+```bash
+./Proyecto/.venv/bin/python ./Proyecto/Vista/main.py
+```
+
+Generar los resultados sin abrir ventanas, por ejemplo en una sesión sin escritorio gráfico:
+
+```bash
+./Proyecto/.venv/bin/python ./Proyecto/Vista/main.py --sin-ventana
+```
+
+Elegir otra carpeta de salida:
+
+```bash
+./Proyecto/.venv/bin/python ./Proyecto/Vista/main.py --sin-ventana --salida "./Proyecto/resultados/comparacion"
+```
+
+Consultar las opciones:
+
+```bash
+./Proyecto/.venv/bin/python ./Proyecto/Vista/main.py --help
 ```
 
 ## Estructura del proyecto
