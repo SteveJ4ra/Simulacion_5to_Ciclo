@@ -20,6 +20,13 @@ class ModeloLluvia:
         if not np.isclose(pesos.sum(), 1.0, rtol=0, atol=1e-12):
             raise ValueError("Los pesos deben sumar 1.")
 
+    @property
+    def ecuacion(self) -> str:
+        return (
+            f"I = {self.peso_humedad:.2f}H + {self.peso_nubosidad:.2f}N "
+            f"+ {self.peso_temperatura:.2f}Tf"
+        )
+
     def evaluar(self, datos: pd.DataFrame) -> pd.DataFrame:
         columnas = ["Humedad", "Nubosidad", "Temperatura"]
         if not {"Hora", *columnas}.issubset(datos.columns):

@@ -54,7 +54,7 @@ Ejecuta desde la carpeta del APE:
 .\Proyecto\.venv\Scripts\python.exe .\Proyecto\Vista\main.py
 ```
 
-El programa muestra en consola las tablas de ambos modelos, su comparación y las horas clasificadas como lluvia. También abre una ventana con las gráficas y guarda los resultados en `Proyecto/resultados/`.
+El programa muestra en consola las tablas de ambos modelos, su comparación y las horas clasificadas como lluvia. También abre las ventanas con las gráficas y guarda los resultados en `Proyecto/resultados/`.
 
 Para generar los resultados sin abrir la ventana:
 
@@ -84,9 +84,12 @@ APE 1/
 │   ├── Modelo/
 │   │   └── modelo.py
 │   ├── Vista/
-│   │   └── main.py
+│   │   ├── main.py
+│   │   └── graficas.py
 │   ├── .venv/             # Entorno local, excluido de Git
 │   └── resultados/        # Se genera al ejecutar el programa
+├── JumboSteven_APE_1_U1.pdf
+├── referencias.bib
 ├── requirements.txt
 └── README.md
 ```
@@ -95,11 +98,11 @@ APE 1/
 - **Controlador:** prepara las mediciones y compara los dos modelos.
 - **Vista:** contiene el ejecutable, muestra las tablas, dibuja las gráficas y guarda los archivos.
 
-El documento de la práctica se incorporará a esta carpeta como `JumboSteven_APE_1_U1.pdf` cuando esté elaborado.
+El desarrollo de la guía está en [JumboSteven_APE_1_U1.pdf](JumboSteven_APE_1_U1.pdf). Las fuentes citadas están disponibles en [referencias.bib](referencias.bib).
 
 ## Información adicional
 
-Cada ejecución genera `modelo_original.csv`, `modelo_ajustado.csv`, `comparacion.csv` y `simulacion.png`. La imagen contiene la comparación de índices y la evolución de las mediciones atmosféricas.
+Cada ejecución genera tres tablas (`modelo_original.csv`, `modelo_ajustado.csv` y `comparacion.csv`) y tres imágenes: `grafica_original.png`, `grafica_ajustado.png` y `simulacion.png`. Las dos primeras muestran cada modelo por separado; la última compara los índices e incluye la evolución de las mediciones atmosféricas.
 
 | Índice | Clasificación |
 | --- | --- |
