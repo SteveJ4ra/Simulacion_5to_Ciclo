@@ -140,14 +140,3 @@ L y Lq se calculan con promedios ponderados por tiempo. Wq utiliza clientes que 
 El programa se detiene al minuto 20 000. Quienes siguen esperando no aportan una espera completa a Wq y quienes aún no han salido no aportan su permanencia a W. La ejecución utiliza una corrida por escenario, sin intervalos de confianza. En el tercero, el error relativo de Wq fue del 24.09 %; el promedio acumulado todavía presenta variaciones.
 
 Para reproducir los valores se deben conservar la semilla, los parámetros y las versiones utilizadas. La semilla permite repetir la secuencia; no elimina la variabilidad del modelo.
-
-## Declaración de uso de IA
-
-Para la presente actividad se ha usado el modelo de inteligencia artificial, GPT 6.1 Sol (Open AI), para acelerar el proceso de investigación de fuentes de calidad para responder las preguntas de control, en conjunto con NotebookLM (Google).
-
-A su vez, se ha utilizado GPT, para entender la sintaxis aplicada en python, para aplicar el patrón arquitectónico "Modelo Vista Controlador (MVC)".
-
-### Prompts utilizado
-
-1. Investiga fuentes de investigación científica que contengan información clave para responder las siguientes preguntas de control presentadas en el documento "ape_guia simulacion semana 3-firmado-signed.pdf". Estas fuentes solo pueden ser de base científica, como papers, revistas, conferencias, congresos, libros, etc.
-2. Muestrame un ejemplo básico de como se aplica el patrón Modelo Vista Controlador (MVC).
