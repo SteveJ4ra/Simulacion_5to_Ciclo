@@ -1,0 +1,32 @@
+# Compilación Java
+out/
+target/
+build/
+*.class
+*.jar
+.gradle/
+
+# Configuración local y temporales
+.idea/
+.vscode/
+*.iml
+.DS_Store
+Thumbs.db
+*.log
+*.tmp
+*.bak
+*.swp
+*~
+.~lock.*#
+
+# Entregables que no forman parte del código publicado
+*.pdf
+*.mp4
+*.zip
+Proyecto/src/resultados/
+
+# Excepciones a resultados/ del .gitignore general del repositorio
+!Proyecto/resultados/
+Proyecto/resultados/*
+!Proyecto/resultados/modelo_sir.nlogox
+!Proyecto/resultados/resultados_java.csv
