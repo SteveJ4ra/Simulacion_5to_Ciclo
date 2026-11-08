@@ -1,0 +1,6 @@
+.venv/
+__pycache__/
+*.pyc
+Proyecto_java/out/
+Proyecto_python/resultados_python/
+Proyecto_java/resultados_java/
